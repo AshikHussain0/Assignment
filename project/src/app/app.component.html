@@ -1,0 +1,49 @@
+<div class="wrapper">
+  <!-- Sidebar -->
+  <div class="sidebar-container">
+    <c-sidebar [(visible)]="isSidebarVisible" class="sidebar-nav">
+      <c-sidebar-brand class="header text-light">
+        <h4 class="text-white">Sidebar Brand</h4>
+      </c-sidebar-brand>
+      <c-sidebar-nav [navItems]="sidebar" dropdownMode="close"> </c-sidebar-nav>
+      <c-sidebar-toggler></c-sidebar-toggler>
+    </c-sidebar>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <c-navbar
+      class="nav-container"
+      colorScheme="light"
+      expand="sm"
+      class="bg-dark"
+    >
+      <c-container fluid>
+        <button [cNavbarToggler]="collapseRef"></button>
+        <div #collapseRef="cCollapse" navbar cCollapse>
+          <c-navbar-nav class="me-auto mb-2 mb-lg-0">
+            <c-nav-item>
+              <a
+                cNavLink
+                [routerLink]="['/select-feature']"
+                [routerLinkActive]="['active']"
+                >Select features</a
+              >
+            </c-nav-item>
+            <c-nav-item>
+              <a
+                cNavLink
+                [routerLink]="['/map-assets']"
+                [routerLinkActive]="['active']"
+                >Map assets</a
+              >
+            </c-nav-item>
+          </c-navbar-nav>
+        </div>
+      </c-container>
+    </c-navbar>
+    <div class="content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

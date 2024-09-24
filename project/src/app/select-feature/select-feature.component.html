@@ -1,0 +1,14 @@
+<div>
+<div class="feature-wrapper">
+    <h6 class="text-white">Calculation resolution</h6>
+    <div class="dropdown">
+        <span class="text-white">Asset level</span>
+        <span class="text-white feature-dropdown">
+            <app-dropdown [placeholder]="'Select assets level'" [options]="options" (selectedOption)="onSelect($event)"></app-dropdown>
+        </span>
+    </div>
+</div>
+<div class="button-container">
+    <app-button [isButtonDisable]="selectedOption" [buttonName]="'Update and Proceed'"></app-button>
+</div>
+</div>
