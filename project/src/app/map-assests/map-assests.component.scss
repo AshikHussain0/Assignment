@@ -1,0 +1,126 @@
+.asset-wrapper {
+  
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #131419;
+    padding: 20px;
+    color: #acadb0;
+    border-radius: 10px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    background-color: #131419;
+    border: none;
+
+    .edit-button {
+      background-color: #00d08a;
+      border: none;
+      color: #ceccc6;
+      width: 150px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #00a96b;
+      }
+    }
+  }
+
+  .plant-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: auto;
+
+    .plants {
+      width: 250px;
+      color: #ceccc6;
+
+      .text-plant {
+        font-size: 14px;
+        color: #ceccc6;
+      }
+
+      .plant-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        padding: 10px 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        background-color: #1e2025;
+
+        .process-card {
+          background-color: #131419;
+          color: #ceccc6;
+          padding: 20px;
+          width: 100%;
+          text-align: center;
+          border-radius: 10px;
+          margin-top: 15px;
+          font-size: 14px;
+        }
+      }
+    }
+
+  }
+
+
+}
+
+.site-nav {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.site-item {
+  background-color: #23242a;
+  color: #ccc;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-site {
+  background-color: #2A2B35;
+  color: #20c997;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+
+  &:hover,
+  &:active {
+    background-color: #3c3e4c;
+  }
+}
+
+.site-item.active {
+  background-color: #2A2B35;
+  color: #20c997;
+}
+
+.edit-icon {
+  margin-left: 8px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.site-item:hover {
+  background-color: #2A2B35;
+}
+
+.text-message {
+  color: white;
+  margin-top: 30px;
+}

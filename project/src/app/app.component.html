@@ -14,9 +14,8 @@
   <div class="main-container">
     <c-navbar
       class="nav-container"
-      colorScheme="light"
+      [ngStyle]="{ backgroundColor: '#131419' }"
       expand="sm"
-      class="bg-dark"
     >
       <c-container fluid>
         <button [cNavbarToggler]="collapseRef"></button>
@@ -32,6 +31,7 @@
             </c-nav-item>
             <c-nav-item>
               <a
+                [disabled]="true"
                 cNavLink
                 [routerLink]="['/map-assets']"
                 [routerLinkActive]="['active']"
@@ -46,4 +46,7 @@
       <router-outlet></router-outlet>
     </div>
   </div>
+</div>
+<div *ngIf="showSpinner" class="spinner-overlay">
+  <c-spinner color="success"></c-spinner>
 </div>

@@ -12,7 +12,11 @@ export class DropdownComponent {
   selectedValue: string = '';
 
 
-  onOptionChange(event: Event) {
+  /**
+  * Method to emit the selected value on option change
+  * @param event:  select event
+  */
+  onOptionChange(event: Event): void {
     const selectElement = event.target as HTMLSelectElement;
     this.selectedValue = selectElement.value;
     this.selectedOption.emit(this.selectedValue);

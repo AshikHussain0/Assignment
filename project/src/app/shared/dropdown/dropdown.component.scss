@@ -1,6 +1,8 @@
 select {
   padding: 10px;
   border: 1px solid #ccc;
+  color: #ceccc6;
+  font-size: 12px;
   background-color: #2A2B35;
   border-radius: 5px;
   padding: 5px !important;
@@ -10,5 +12,10 @@ select {
 }
 
 option {
-  color: white;
+  color: #ceccc6;
+
+  &:hover {
+    background-color: #20c997; // Background color on hover
+    color: black; // Text color on hover
+  }
 }

@@ -2,5 +2,11 @@
     background-color: #20c997;
     color: white;
     border-radius: 5px;
+    width: 100%;
     border: none;
+
+    &:hover {
+        background-color: #1aa078;
+        color: white;
+    }
 }

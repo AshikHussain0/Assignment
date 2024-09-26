@@ -1,6 +1,62 @@
-<div>
-    <div>
-
+<div class="asset-wrapper">
+  <p class="text-message" *ngIf="assetLevel === 'Company'">
+    Please select Site, Plant or process
+  </p>
+  <div *ngIf="assetLevel !== 'Company'">
+    <!-- Site list and add site option -->
+    <div
+      class="site-list"
+      *ngIf="
+        assetLevel === 'Site' ||
+        assetLevel === 'Plant' ||
+        assetLevel === 'Process'
+      "
+    >
+      <div class="site-nav">
+        <div
+          (click)="selectSite(i)"
+          class="site-item active"
+          [ngClass]="{ active: i === selectedIndex }"
+          *ngFor="let details of processDetails; let i = index"
+        >
+          <span>{{ details.siteName }}</span>
+          <i class="edit-icon">&#9998;</i>
+        </div>
+      </div>
+      <div>
+        <button class="add-site">+ Add site</button>
+      </div>
     </div>
-    <p>Please select Site, Plant or process</p>
+    <p class="text-message" *ngIf="assetLevel === 'Site'">
+      Please select Plant or process
+    </p>
+    <!-- Plant and process container -->
+    <div
+      class="plant-process-container"
+      *ngIf="assetLevel === 'Plant' || assetLevel === 'Process'"
+    >
+      <div class="container">
+        <!-- Edit button -->
+        <div class="header">
+          <app-button class="edit-button" [buttonName]="'Edit'"
+            >Edit</app-button
+          >
+        </div>
+        <!-- Plant container -->
+        <div class="plant-container">
+          <div class="plants" *ngFor="let plant of plants; let i = index">
+            <span class="text-plant">{{ plant.plantName }}</span>
+            <div class="plant-column" *ngIf="assetLevel === 'Process'">
+              <div class="process-card" *ngFor="let process of plant.process">
+                {{ process }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-message" *ngIf="assetLevel === 'Plant'">
+        Please select process
+      </p>
+    </div>
+  </div>
 </div>

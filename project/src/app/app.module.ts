@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-import { CollapseModule, ContainerComponent, HeaderModule, NavbarModule, NavModule, SidebarModule, SidebarNavComponent } from '@coreui/angular';
+import { CollapseModule, ContainerComponent, HeaderModule, NavbarModule, NavModule, SidebarModule, SidebarNavComponent, SpinnerModule } from '@coreui/angular';
 import { MapAssetsModule } from './map-assests/map-assets.module';
 import { SelectFeatureModule } from './select-feature/select-feature.module';
 
@@ -27,6 +27,7 @@ import { SelectFeatureModule } from './select-feature/select-feature.module';
     MapAssetsModule,
     SelectFeatureModule,
     SidebarNavComponent,
+    SpinnerModule,
     RouterModule.forRoot(routes),
 ],
   providers: [], 
